@@ -1,0 +1,145 @@
+.main {
+  width: 100%;
+  background-color: var(--primary-black);
+  display: flex;
+  padding-block: 50px;
+  padding-left: 60px;
+  column-gap: 100px;
+  position: relative;
+}
+
+.text-section {
+  width: 55%;
+}
+
+.text-section .text {
+  color: var(--primary-white);
+  text-wrap: wrap;
+  font-size: 1.1rem;
+}
+
+.text:nth-of-type(1) {
+  padding-bottom: 10px;
+}
+
+.important-text {
+  color: var(--color-orange);
+}
+
+.important-text:nth-child(2) {
+  font-size: 3rem;
+  padding-block: 15px;
+}
+
+.img-section {
+  mask-image: url(assets/mask.png);
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+}
+
+.img-section img {
+  height: 350px;
+}
+
+.gray-container {
+  background-color: var(--primary-gray);
+  width: 100%;
+  height: 110px;
+}
+
+.lets-talk-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 60%;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: var(--primary-white);
+}
+
+.lets-talk-container .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lets-talk-container button {
+  background-color: var(--color-orange);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "roboto";
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: background-color 0.25s linear, color 0.25s linear;
+}
+
+.lets-talk-container button:hover {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+}
+
+@media screen and (max-width: 1165px) {
+  .main {
+    padding: 40px;
+    column-gap: 100px;
+    position: relative;
+  }
+  .img-section {
+    display: none;
+  }
+  .text-section {
+    width: 100%;
+  }
+  .text-section .text {
+    color: var(--primary-white);
+    text-wrap: wrap;
+    font-size: 1.1rem;
+    padding-bottom: 100px;
+  }
+
+  .text:nth-of-type(1) {
+    padding-bottom: 20px;
+  }
+
+  .important-text {
+    color: var(--color-orange);
+  }
+
+  .important-text:nth-child(2) {
+    font-size: 2.5rem;
+    padding-block: 15px;
+  }
+
+  .gray-container {
+    background-color: var(--primary-gray);
+    width: 100%;
+    height: 240px;
+  }
+
+  .lets-talk-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    width: 80%;
+    top: calc(100% + 45px);
+  }
+
+  .lets-talk-container .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .lets-talk-container .text-container h3,
+  .lets-talk-container .text-container p {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 35px;
+  }
+}

@@ -1,0 +1,142 @@
+.contact-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
+  background-color: var(--primary-black);
+}
+
+.contact-container .contact {
+  display: flex;
+  gap: 20px;
+}
+
+.contact a,
+.job-enquiry a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.84rem;
+  color: var(--primary-white);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  background-color: var(--primary-white);
+  z-index: 1;
+}
+
+header .rayinfo-logo {
+  width: 180px;
+}
+
+header #toggle-nav-menu {
+  display: none;
+}
+
+header #toggle-nav-menu-label {
+  display: none;
+  color: var(--color-sea-blue);
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  z-index: 2;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: var(--primary-black);
+  margin-left: 30px;
+}
+
+header ul li a:hover:not(.schedule-btn) {
+  color: var(--color-orange);
+}
+
+.schedule-btn {
+  color: var(--primary-white);
+  background-color: var(--color-orange);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-left: 15px;
+  transition: background-color 0.25s linear;
+}
+
+.schedule-btn:hover {
+  background-color: var(--primary-black);
+}
+
+@media screen and (max-width: 1165px) {
+  .contact-container .contact {
+    display: flex;
+    gap: 10px;
+  }
+
+  .contact-container {
+    padding: 7px;
+    flex-direction: column;
+  }
+
+  header .rayinfo-logo {
+    width: 210px;
+  }
+
+  header #toggle-nav-menu-label {
+    display: block;
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  header ul {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    background-color: var(--primary-white);
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.25s ease-in-out;
+  }
+
+  header ul li {
+    background-color: var(--primary-white);
+    width: 100%;
+    text-align: center;
+    padding-block: 5px;
+    border-top: 1px solid #eae9e79d;
+    height: 35px;
+  }
+
+  header ul li a {
+    margin-left: 0px;
+  }
+
+  li:has(.schedule-btn) {
+    border-top: none;
+    padding: 0;
+  }
+
+  .schedule-btn {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0;
+    border-radius: 1px;
+    padding: 0;
+    height: 36px;
+    display: grid;
+    place-items: center;
+  }
+
+  header #toggle-nav-menu:checked + ul {
+    height: calc(35px * 9);
+  }
+}
