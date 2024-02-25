@@ -121,3 +121,46 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(assets/graphics-designing.jpg);
 }
+
+@media screen and (max-width: 1165px) {
+  .services .services-carousel {
+    width: 100%;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .services .services-carousel .service {
+    height: 100px;
+    flex: initial;
+    padding: 0px 30px;
+    transition: height 0.5s ease-in-out;
+  }
+  .services .services-carousel .service:hover {
+    height: 300px;
+    flex: initial;
+  }
+  .service-info h1 {
+    font-size: 1.3rem;
+    width: initial;
+    padding-block: 0px 10px;
+    color: var(--primary-white);
+  }
+
+  .service-info p {
+    font-size: .8rem;
+    width: initial;
+    padding-block: 10px;
+    color: var(--primary-white);
+  }
+
+  .service-info button {
+    color: var(--primary-white);
+    border: 1px solid var(--primary-white);
+    width: initial;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: transparent;
+  }
+}
