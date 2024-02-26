@@ -4,13 +4,14 @@ let hasReached = false;
 function showHideButton() {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   backToTopBtn.style.display = scrollTop >= 100 ? "block" : "none";
+  const countsContainer = document.querySelector(".counts");
   const clientsCountText = document.querySelector(".clients-count");
   const projectCountText = document.querySelector(".project-count");
   const experienceCountText = document.querySelector(".experience-count");
   const employeesCountText = document.querySelector(".employees-count");
-
+  console.log(scrollTop + "    " + countsContainer.offsetTop);
   if (!hasReached) {
-    if (scrollTop > 1000) {
+    if (scrollTop > 800) {
       let clientsCount = 700;
       let projectCount = 2800;
       let experienceCount = 0;
